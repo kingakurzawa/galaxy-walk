@@ -1,4 +1,7 @@
-# walk-in-the-galaxy
+# galaxy-walk
+
+This is my first project in Vue.js which uses NASA image API to fetch images and display them after passing 
+search query
 
 ## Project setup
 ```
