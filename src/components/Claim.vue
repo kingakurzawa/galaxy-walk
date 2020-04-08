@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 <template>
   <div class="claimWrapper">
     <h1 class="claim" >Galaxy Walk</h1>
@@ -28,10 +27,10 @@ export default {
 }
 .claim {
   margin: 0;
-  font-size: 3rem;
+  font-size: 5rem;
 }
 .subclaim {
-  margin-top: 2rem;
-  font-size: 1.3rem;
+  margin: 2rem;
+  font-size: 1.8rem;
 }
 </style>

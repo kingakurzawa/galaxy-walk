@@ -33,14 +33,18 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
+<style lang='scss' scoped>
   .wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin: 0;
-    padding: 30px;
     width: 100%;
-    // background-image: url('../assets/');
+    height: 100vh;
+    background-image: url('../assets/nasa.large.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 100%;
   }
 </style>
