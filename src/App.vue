@@ -9,5 +9,9 @@
 </template>
 
 <style lang="scss" scoped>
-
+  * {
+    box-sizing: border-box;
+    font-family: fantasy;
+    font-size: 10px;
+  }
 </style>
