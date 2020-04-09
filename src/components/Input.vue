@@ -34,9 +34,15 @@ export default {
       font-family: fantasy;
       font-weight: bolder;
       font-size: 2rem;
+      font-weight: 500;
+      text-align: center;
       border: 0;
-      border-bottom: .1rem solid #fff;
+      border-bottom: .1rem dashed #fff;
       background: none;
+      outline: none;
+    }
+    input:focus {
+      box-shadow: 0 15px 15px -10px #f40c0c76;
     }
   }
 </style>
