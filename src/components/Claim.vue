@@ -4,7 +4,7 @@
     <p class="subclaim" >“The real voyage
       of discovery consists not in seeking new
       landscapes but in having new eyes.”
-      ~ Marcel Proust ~
+      <span>~ Marcel Proust ~</span>
     </p>
     <p class="subclaim" >
         Grab the keyboard and discover the unknown
@@ -30,7 +30,37 @@ export default {
   font-size: 5rem;
 }
 .subclaim {
+  display: flex;
+  flex-direction: column;
   margin: 2rem;
   font-size: 1.8rem;
+  span {
+    align-self: flex-end;
+    font-size: 1.4rem;
+  }
 }
+  @media (min-width:768px) {
+    .claimWrapper {
+      width: 80%;
+    }
+    .claim {
+      font-size: 7rem;
+    }
+    .subclaim {
+      font-size: 2.2rem;
+      span {
+        align-self: flex-end;
+        margin-top: 1rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  @media (min-width:768px) {
+    .claimWrapper {
+      width: 60%;
+    }
+    .subclaim:first-of-type {
+      margin-top: 10rem;
+    }
+  }
 </style>

@@ -4,8 +4,8 @@
       <input
         id='search'
         name='search'
-        v-model="searchValue"
-        @input="handlerInput"
+        :value="value"
+        @input="handleChange"
       />
     </div>
   </div>
@@ -15,6 +15,17 @@
 
 export default {
   name: 'Input',
+  props: {
+    value: {
+      type: String,
+      required: true,
+    },
+  },
+  methods: {
+    handleChange(e) {
+      this.$emit('input', e.target.value);
+    },
+  },
 };
 </script>
 <style lang='scss' scoped>
@@ -43,6 +54,14 @@ export default {
     }
     input:focus {
       box-shadow: 0 15px 15px -10px #f40c0c76;
+    }
+  }
+  @media (min-width:768px) {
+    .inputWrapper {
+      margin-top: 100px;
+    }
+    .search {
+      width: 24rem;
     }
   }
 </style>
