@@ -1,7 +1,9 @@
 # galaxy-walk
 
 This is my first project in Vue.js which uses NASA image API to fetch images and display them after passing 
-search query
+search query. 
+Enter the name of any celestial body, e.g. Sun, Mercury etc.
+If you want to see, get on a rocket, fasten your seat belt and click ---> https://distracted-haibt-6fb73c.netlify.app
 
 ## Project setup
 ```
