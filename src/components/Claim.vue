@@ -8,6 +8,7 @@
     </p>
     <p class="subclaim" >
         Grab the keyboard and discover the unknown
+        <span class="tip">type celestial body, e.g. sun</span>
     </p>
   </div>
 </template>
@@ -34,9 +35,14 @@ export default {
   flex-direction: column;
   margin: 2rem;
   font-size: 1.8rem;
-  span {
+   span {
     align-self: flex-end;
     font-size: 1.4rem;
+  }
+  .tip {
+    align-self: center;
+    font-size: 1.8rem;
+    color: rgba(255, 247, 0, 0.982);
   }
 }
   @media (min-width:768px) {
@@ -54,13 +60,11 @@ export default {
         font-size: 1.5rem;
       }
     }
-  }
-  @media (min-width:768px) {
-    .claimWrapper {
-      width: 60%;
+      .claimWrapper {
+        width: 60%;
     }
     .subclaim:first-of-type {
-      margin-top: 10rem;
+        margin-top: 10rem;
     }
   }
 </style>

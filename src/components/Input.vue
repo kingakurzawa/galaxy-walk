@@ -4,6 +4,7 @@
       <input
         id='search'
         name='search'
+        :class="{ dark: dark}"
         :value="value"
         @input="handleChange"
       />
@@ -20,6 +21,10 @@ export default {
       type: String,
       required: true,
     },
+    dark: {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
     handleChange(e) {
@@ -28,12 +33,13 @@ export default {
   },
 };
 </script>
-<style lang='scss' scoped>
+<style lang='scss'>
 .inputWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 10rem;
 }
 .search {
     display: flex;
@@ -53,13 +59,17 @@ export default {
       outline: none;
     }
     input:focus {
-      box-shadow: 0 15px 15px -10px #f40c0c76;
+      box-shadow: 0 1.5rem 1.5rem -1rem #f40c0c76;
     }
+    .dark {
+      color: #243933;
+      border-bottom-color: #243933;
+    }
+    .dark:focus {
+        box-shadow: 0 1.5rem 1.5rem -1rem rgba(#243933, .3);
+      }
   }
   @media (min-width:768px) {
-    .inputWrapper {
-      margin-top: 100px;
-    }
     .search {
       width: 24rem;
     }
