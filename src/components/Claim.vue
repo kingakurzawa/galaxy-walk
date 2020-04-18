@@ -1,14 +1,14 @@
-/* eslint-disable max-len */
 <template>
   <div class="claimWrapper">
     <h1 class="claim" >Galaxy Walk</h1>
     <p class="subclaim" >“The real voyage
       of discovery consists not in seeking new
       landscapes but in having new eyes.”
-      ~ Marcel Proust ~
+      <span>~ Marcel Proust ~</span>
     </p>
     <p class="subclaim" >
         Grab the keyboard and discover the unknown
+        <span class="tip">type celestial body, e.g. sun</span>
     </p>
   </div>
 </template>
@@ -28,10 +28,43 @@ export default {
 }
 .claim {
   margin: 0;
-  font-size: 3rem;
+  font-size: 5rem;
 }
 .subclaim {
-  margin-top: 2rem;
-  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  font-size: 1.8rem;
+   span {
+    align-self: flex-end;
+    font-size: 1.4rem;
+  }
+  .tip {
+    align-self: center;
+    font-size: 1.8rem;
+    color: rgba(255, 247, 0, 0.982);
+  }
 }
+  @media (min-width:768px) {
+    .claimWrapper {
+      width: 80%;
+    }
+    .claim {
+      font-size: 7rem;
+    }
+    .subclaim {
+      font-size: 2.2rem;
+      span {
+        align-self: flex-end;
+        margin-top: 1rem;
+        font-size: 1.5rem;
+      }
+    }
+      .claimWrapper {
+        width: 60%;
+    }
+    .subclaim:first-of-type {
+        margin-top: 10rem;
+    }
+  }
 </style>

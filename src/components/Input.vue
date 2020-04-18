@@ -1,18 +1,13 @@
-/* eslint-disable max-len */
 <template>
   <div class="inputWrapper">
      <div class='search'>
       <input
         id='search'
         name='search'
-        v-model="searchValue"
-        @input="handlerInput"
+        :class="{ dark: dark}"
+        :value="value"
+        @input="handleChange"
       />
-      <ul>
-        <li v-for='item in results' :key='item.data[0].nasa_id'>
-          <p> {{ item.data[0].description }} </p>
-        </li>
-      </ul>
     </div>
   </div>
 </template>
@@ -21,27 +16,62 @@
 
 export default {
   name: 'Input',
+  props: {
+    value: {
+      type: String,
+      required: true,
+    },
+    dark: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  methods: {
+    handleChange(e) {
+      this.$emit('input', e.target.value);
+    },
+  },
 };
 </script>
-<style lang='scss' scoped>
+<style lang='scss'>
 .inputWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 10rem;
 }
 .search {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    label {
-      font-family: fantasy
-    }
+    width: 14rem;
     input {
-      height: 30px;
+      height: 3rem;
+      color: #fff;
+      font-family: fantasy;
+      font-weight: bolder;
+      font-size: 2rem;
+      font-weight: 500;
+      text-align: center;
       border: 0;
-      border-bottom: 1px solid black;
+      border-bottom: .1rem dashed #fff;
+      background: none;
+      outline: none;
+    }
+    input:focus {
+      box-shadow: 0 1.5rem 1.5rem -1rem #f40c0c76;
+    }
+    .dark {
+      color: #243933;
+      border-bottom-color: #243933;
+    }
+    .dark:focus {
+        box-shadow: 0 1.5rem 1.5rem -1rem rgba(#243933, .3);
+      }
+  }
+  @media (min-width:768px) {
+    .search {
+      width: 24rem;
     }
   }
 </style>
